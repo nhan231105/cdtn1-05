@@ -47,6 +47,21 @@ public class SurveyInvitation {
     @Column(name = "expires_at", nullable = false)
     private LocalDateTime expiresAt;
 
+    @Column(name = "last_attempt_at")
+    private LocalDateTime lastAttemptAt;
+
+    @Column(name = "reminder_attempts", nullable = false)
+    private short reminderAttempts;
+
+    @Column(name = "last_reminder_attempt_at")
+    private LocalDateTime lastReminderAttemptAt;
+
+    @Column(name = "survey_title", nullable = false, length = 120)
+    private String surveyTitle;
+
+    @Column(name = "survey_intro", nullable = false, length = 1000)
+    private String surveyIntro;
+
     protected SurveyInvitation() {
         // Required by JPA
     }
@@ -57,10 +72,24 @@ public class SurveyInvitation {
             LocalDateTime createdAt,
             LocalDateTime expiresAt
     ) {
+        this(ticketId, token, createdAt, expiresAt, "Trải nghiệm của bạn thế nào?",
+                "Hãy chia sẻ cảm nhận về dịch vụ bảo hành của Mekong Mobile.");
+    }
+
+    public SurveyInvitation(
+            Long ticketId,
+            String token,
+            LocalDateTime createdAt,
+            LocalDateTime expiresAt,
+            String surveyTitle,
+            String surveyIntro
+    ) {
         this.ticketId = Objects.requireNonNull(ticketId);
         this.token = Objects.requireNonNull(token);
         this.createdAt = Objects.requireNonNull(createdAt);
         this.expiresAt = Objects.requireNonNull(expiresAt);
+        this.surveyTitle = Objects.requireNonNull(surveyTitle);
+        this.surveyIntro = Objects.requireNonNull(surveyIntro);
 
         this.status = "CHO_GUI";
         this.channel = "SMS";
@@ -106,4 +135,74 @@ public class SurveyInvitation {
     public LocalDateTime getExpiresAt() {
         return expiresAt;
     }
+
+    public LocalDateTime getLastAttemptAt() { return lastAttemptAt; }
+
+    public void recordAttemptAt(LocalDateTime time) { lastAttemptAt = time; }
+
+    public void markResponded() { status = "DA_PHAN_HOI"; }
+
+    public void markReminded(LocalDateTime time) { remindedAt = time; }
+
+    public short getReminderAttempts() { return reminderAttempts; }
+
+    public LocalDateTime getLastReminderAttemptAt() { return lastReminderAttemptAt; }
+
+    public String getSurveyTitle() { return surveyTitle; }
+
+    public String getSurveyIntro() { return surveyIntro; }
+
+    public void updateChannel(String channel) {
+        if (!"CHO_GUI".equals(status) || sendAttempts != 0 || sentAt != null) {
+            throw new IllegalStateException("Chỉ lời mời chưa gửi mới được đổi kênh");
+        }
+        if (!"SMS".equals(channel) && !"ZALO".equals(channel)) {
+            throw new IllegalArgumentException("Kênh gửi chỉ được là SMS hoặc ZALO");
+        }
+        this.channel = channel;
+    }
+
+    public void recordReminderAttempt(LocalDateTime time) {
+        reminderAttempts++;
+        lastReminderAttemptAt = time;
+    }
+
+    public void markSent(String channel, LocalDateTime sentTime) {
+        validateSendAttempt(channel);
+        Objects.requireNonNull(sentTime, "sentTime");
+
+        this.channel = channel;
+        this.sendAttempts++;
+        this.sentAt = sentTime;
+        this.status = "DA_GUI";
+    }
+
+    public void markSendFailed(String channel) {
+        validateSendAttempt(channel);
+
+        this.channel = channel;
+        this.sendAttempts++;
+        this.status = "GUI_LOI";
+    }
+
+    private void validateSendAttempt(String channel) {
+        if (!"SMS".equals(channel) && !"ZALO".equals(channel)) {
+            throw new IllegalArgumentException(
+                    "Kênh gửi chỉ được là SMS hoặc ZALO"
+            );
+        }
+
+        if (!"CHO_GUI".equals(status) && !"GUI_LOI".equals(status)) {
+            throw new IllegalStateException(
+                    "Trạng thái hiện tại không cho phép gửi lời mời"
+            );
+        }
+
+        if (sendAttempts >= 3) {
+            throw new IllegalStateException(
+                    "Đã vượt quá 3 lần thử gửi"
+            );
+        }
+    }
+
 }

@@ -45,10 +45,7 @@ public class ServiceKeyFilter extends OncePerRequestFilter {
                 PATH.equals(path)
                         || path.startsWith(PATH + "/");
 
-        boolean isPost =
-                "POST".equalsIgnoreCase(request.getMethod());
-
-        return !(isPost && protectedPath);
+        return !protectedPath;
     }
 
 

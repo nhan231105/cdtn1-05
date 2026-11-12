@@ -9,7 +9,8 @@ public class SurveyBusinessException extends RuntimeException {
     public enum Code {
         TICKET_NOT_FOUND,
         TICKET_NOT_CLOSED,
-        INVITATION_ALREADY_EXISTS
+        INVITATION_ALREADY_EXISTS,
+        INVITATION_CANCELLED
     }
 
     private final Code code;
@@ -58,6 +59,14 @@ public class SurveyBusinessException extends RuntimeException {
                 Code.INVITATION_ALREADY_EXISTS,
                 "Phiếu bảo hành đã có lời mời khảo sát",
                 Map.of("existing_invitation_id", existingInvitationId)
+        );
+    }
+
+    public static SurveyBusinessException invitationCancelled() {
+        return new SurveyBusinessException(
+                Code.INVITATION_CANCELLED,
+                "Lời mời đã bị hủy; phiếu này không thể tạo lời mời khác",
+                Map.of()
         );
     }
 }

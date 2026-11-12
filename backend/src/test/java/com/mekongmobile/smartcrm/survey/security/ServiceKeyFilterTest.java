@@ -150,4 +150,18 @@ class ServiceKeyFilterTest {
         assertNull(chain.getRequest());
     }
 
+    @Test
+    void shouldRequireServiceKeyForReadUpdateAndDelete() throws Exception {
+        for (String method : new String[]{"GET", "PATCH", "DELETE"}) {
+            String path = "/api/survey-invitations/4";
+            var request = new MockHttpServletRequest(method, path);
+            request.setServletPath(path);
+            var response = new MockHttpServletResponse();
+            var chain = new MockFilterChain();
+            filter.doFilter(request, response, chain);
+            assertEquals(401, response.getStatus(), method);
+            assertNull(chain.getRequest(), method);
+        }
+    }
+
 }

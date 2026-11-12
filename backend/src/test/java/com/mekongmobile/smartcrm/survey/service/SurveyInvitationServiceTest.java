@@ -7,6 +7,9 @@ import com.mekongmobile.smartcrm.survey.dto.CreateSurveyInvitationResponse;
 import com.mekongmobile.smartcrm.survey.entity.SurveyInvitation;
 import com.mekongmobile.smartcrm.survey.exception.SurveyBusinessException;
 import com.mekongmobile.smartcrm.survey.repository.SurveyInvitationRepository;
+import com.mekongmobile.smartcrm.survey.repository.CancelledSurveyInvitationRepository;
+import com.mekongmobile.smartcrm.survey.repository.SurveyResponseRepository;
+import com.mekongmobile.smartcrm.survey.repository.SurveyTemplateRepository;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -24,16 +27,24 @@ class SurveyInvitationServiceTest {
     private final SurveyInvitationRepository invitationRepository =
             mock(SurveyInvitationRepository.class);
 
+    private final CancelledSurveyInvitationRepository cancelledInvitations =
+            mock(CancelledSurveyInvitationRepository.class);
+    private final SurveyResponseRepository responses = mock(SurveyResponseRepository.class);
+    private final SurveyTemplateRepository templates = mock(SurveyTemplateRepository.class);
+
     private final SurveyInvitationService service =
             new SurveyInvitationService(
                     ticketRepository,
                     invitationRepository,
+                    cancelledInvitations,
+                    responses,
+                    templates,
                     "http://localhost:5173/khao-sat"
             );
 
     @Test
     void shouldRejectMissingTicket() {
-        when(ticketRepository.findById(999L))
+        when(ticketRepository.lockById(999L))
                 .thenReturn(Optional.empty());
 
         SurveyBusinessException ex = assertThrows(
@@ -56,7 +67,7 @@ class SurveyInvitationServiceTest {
         when(ticket.getStatus())
                 .thenReturn("DANG_XU_LY");
 
-        when(ticketRepository.findById(404L))
+        when(ticketRepository.lockById(404L))
                 .thenReturn(Optional.of(ticket));
 
         SurveyBusinessException ex = assertThrows(
@@ -82,7 +93,7 @@ class SurveyInvitationServiceTest {
         Ticket ticket = mock(Ticket.class);
 
         when(ticket.getStatus()).thenReturn("DA_DONG");
-        when(ticketRepository.findById(401L))
+        when(ticketRepository.lockById(401L))
                 .thenReturn(Optional.of(ticket));
 
         SurveyInvitation existing =
@@ -120,11 +131,13 @@ class SurveyInvitationServiceTest {
         when(ticket.getTicketCode())
                 .thenReturn("DEMO-L8-0001");
 
-        when(ticketRepository.findById(401L))
+        when(ticketRepository.lockById(401L))
                 .thenReturn(Optional.of(ticket));
 
         when(invitationRepository.findByTicketId(401L))
                 .thenReturn(Optional.empty());
+        when(templates.findActive()).thenReturn(Optional.of(new SurveyTemplateRepository.Template(
+                1, "Default", "Trải nghiệm của bạn thế nào?", "Hãy chia sẻ cảm nhận.", true, "", "")));
 
         when(invitationRepository.saveAndFlush(
                 any(SurveyInvitation.class)

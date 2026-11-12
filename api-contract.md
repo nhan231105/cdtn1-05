@@ -290,3 +290,20 @@ Lỗi: **400** (khoảng ngày sai); **401**; **403** (khác trung tâm).
 | Có endpoint nào không phục vụ story nào?                             | Không.                                                                                                                |
 | Quy tắc nghiệp vụ đã xuất hiện trong validation hoặc mã lỗi?         | ✔ QT-10 (409, 422), QT-02 (INVALID_PHONE), QT-13 (không có endpoint sửa/xóa), QT-14 (403), QT-15 (số điện thoại che). |
 | Mỗi mã trạng thái là một test case cho BT3?                          | Có: tổng 36 trường hợp lỗi + 9 trường hợp thành công.                                                                 |
+
+## 9. Phụ lục hiện thực BT2 ngày 12/11/2026 (bổ sung, không thay hợp đồng BT1)
+
+Các endpoint dưới đây bổ sung CRUD nội bộ cho S1. Phản hồi đã gửi vẫn không có API sửa/xóa; dữ liệu `customer`, `ticket`, `technician`, `service_center` tiếp tục chỉ đọc trong L8.
+
+| Method và path | Xác thực | Hành vi |
+|---|---|---|
+| GET `/api/survey-invitations` | `X-Service-Key` | Đọc danh sách lời mời, mới tạo trước; không công khai cho frontend khách hàng/nội bộ không có service key. |
+| GET `/api/survey-invitations/{invitation_id}` | `X-Service-Key` | Đọc chi tiết và URL khảo sát của một lời mời. |
+| PATCH `/api/survey-invitations/{invitation_id}` | `X-Service-Key` | Chỉ đổi `channel` (`SMS` hoặc `ZALO`) khi `CHO_GUI`, chưa thử gửi. |
+| DELETE `/api/survey-invitations/{invitation_id}` | `X-Service-Key` | Xóa vật lý lời mời chưa gửi/chưa có phản hồi; ghi dấu hủy để không thể phát hành token khác cho cùng phiếu. Trả 204. |
+| GET `/api/survey-templates` và `GET /{template_id}` | JWT Marketing | Đọc danh mục/chi tiết mẫu. |
+| POST `/api/survey-templates` | JWT Marketing | Tạo mẫu có tên, tiêu đề, nội dung giới thiệu và trạng thái hoạt động. |
+| PUT `/api/survey-templates/{template_id}` | JWT Marketing | Thay nội dung hoặc chuyển mẫu đang hoạt động. Tối đa một mẫu hoạt động; không thể tắt mẫu cuối cùng. |
+| DELETE `/api/survey-templates/{template_id}` | JWT Marketing | Xóa vật lý mẫu không hoạt động; mẫu đang hoạt động không thể xóa. |
+
+EP1 chụp `title` và `intro_text` của mẫu đang hoạt động vào lời mời. Sửa mẫu không đổi nội dung của link đã phát hành. Tên mẫu duy nhất; trường bắt buộc được trim và giới hạn theo schema. Lỗi quyền: 401/403; dữ liệu sai: 400; không tìm thấy: 404; xung đột tên/trạng thái: 409. Chi tiết và giới hạn học thuật ghi tại `docs/thay-doi-thiet-ke.md`.

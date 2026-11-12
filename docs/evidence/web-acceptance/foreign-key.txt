@@ -1,0 +1,1 @@
+ERROR 1452 (23000) at line 1: Cannot add or update a child row: a foreign key constraint fails (`smartcrm_l8_test`.`survey_response`, CONSTRAINT `survey_response_ibfk_1` FOREIGN KEY (`ticket_id`) REFERENCES `ticket` (`ticket_id`))

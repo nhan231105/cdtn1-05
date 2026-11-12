@@ -25,7 +25,7 @@ public class SurveyExceptionHandler {
         HttpStatus status = switch (exception.getCode()) {
             case TICKET_NOT_FOUND -> HttpStatus.NOT_FOUND;
             case TICKET_NOT_CLOSED -> HttpStatus.UNPROCESSABLE_CONTENT;
-            case INVITATION_ALREADY_EXISTS -> HttpStatus.CONFLICT;
+            case INVITATION_ALREADY_EXISTS, INVITATION_CANCELLED -> HttpStatus.CONFLICT;
         };
 
         return buildError(
@@ -117,11 +117,17 @@ public class SurveyExceptionHandler {
         }
 
         return buildError(
-                HttpStatus.INTERNAL_SERVER_ERROR,
-                "DATABASE_ERROR",
+                HttpStatus.SERVICE_UNAVAILABLE,
+                "SERVICE_UNAVAILABLE",
                 "Không thể lưu dữ liệu do lỗi ràng buộc cơ sở dữ liệu",
                 Map.of()
         );
+    }
+
+    @ExceptionHandler(org.springframework.dao.DataAccessException.class)
+    public ResponseEntity<Map<String, Object>> handleUnavailable(org.springframework.dao.DataAccessException exception) {
+        return buildError(HttpStatus.SERVICE_UNAVAILABLE, "SERVICE_UNAVAILABLE",
+                "Không thể lưu dữ liệu, vui lòng thử lại", Map.of());
     }
 
 }

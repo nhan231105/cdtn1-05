@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.mekongmobile.smartcrm.survey.service.SurveyFlowIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.935 s -- in com.mekongmobile.smartcrm.survey.service.SurveyFlowIntegrationTest
