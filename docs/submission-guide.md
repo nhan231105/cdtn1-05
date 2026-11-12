@@ -1,6 +1,6 @@
 # Hướng dẫn nghiệm thu và nộp BT2
 
-Theo đề BT2 đã tìm thấy ở thư mục học liệu, nộp một PDF và link repository/tag `v0.2`. Kết quả từng bước kiểm tra và Git cuối được ghi trong [checkpoint 3](checkpoint-3.md); quy trình hiện tại đang thực hiện theo yêu cầu hoàn thiện đã được người dùng cung cấp.
+Theo đề BT2 đã tìm thấy ở thư mục học liệu, nộp một PDF và link repository/tag `v0.2`. Bản PDF cập nhật và tag đã được tạo; kết quả kiểm thử cùng hash Git xác minh được ghi trong [checkpoint 3](checkpoint-3.md). Sinh viên cần tự đọc báo cáo và hoàn tất nộp E-learning.
 
 ## Nghiệm thu bắt buộc trước nộp
 
@@ -28,6 +28,6 @@ Theo đề BT2 đã tìm thấy ở thư mục học liệu, nộp một PDF và
 
 PDF mới8trang có bìa, matrix UC/rubric, kiến trúc/quy tắc, kết quả test, ảnh data/loading/empty/error, dựng lại, thay đổi BT1 và khai báo AI. PDF/DOCX cũ được giữ nguyên. Sinh viên cần đọc, giải thích và xác nhận nội dung trước khi nộp. Trạng thái tag/repository được xác minh ở checkpoint 3.
 
-## Thao tác Git cuối
+## Kết quả phát hành Git
 
-Lệnh push branch, merge `main` và tạo annotated tag `v0.2` được người dùng yêu cầu trong prompt tổng. Ghi kết quả lệnh và hash xác minh thực tế tại checkpoint 3; push branch không thay cho push tag. Nếu repository private, người nộp cần bảo đảm giảng viên có quyền xem.
+Branch `feat/bt2-setup` đã push, merge commit `b995775` đã lên `main`, và annotated tag `v0.2` đã push riêng. Hash đầy đủ cùng kết quả `git ls-remote` ở checkpoint 3. Nếu repository private, người nộp cần bảo đảm giảng viên có quyền xem.

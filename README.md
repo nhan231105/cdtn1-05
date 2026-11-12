@@ -20,7 +20,7 @@ npm --version
 git branch --show-current
 ```
 
-Nhánh công việc hiện tại là `feat/bt2-setup`. Hướng dẫn này không thực hiện push, merge hoặc tạo tag.
+Nhánh triển khai `feat/bt2-setup` đã được merge vào `main` và phát hành bằng annotated tag `v0.2`. Hash các ref đã xác minh được ghi tại [checkpoint 3](docs/checkpoint-3.md). Các bước dựng và kiểm thử bên dưới không thực hiện thao tác Git phát hành.
 
 ## Cấu hình lần đầu
 
