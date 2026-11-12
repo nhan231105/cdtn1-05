@@ -11,14 +11,14 @@
 +-------------------+-------------+---------------+-------+------------------------------------------------+----------------+
 | ticket_code       | status      | send_attempts | score | comment                                        | response_count |
 +-------------------+-------------+---------------+-------+------------------------------------------------+----------------+
-| E2E-1794500524862 | DA_PHAN_HOI |             1 |     5 | Kiểm thử E2E: phục vụ nhiệt tình               |              1 |
+| E2E-1794501024767 | DA_PHAN_HOI |             1 |     5 | Kiểm thử E2E: phục vụ nhiệt tình               |              1 |
 | DEMO-L8-0001      | DA_PHAN_HOI |             1 |     5 | Nghiệm thu website: dữ liệu tổng hợp           |              1 |
-| A1794500606831    | DA_PHAN_HOI |             1 |     1 | Synthetic score boundary 1                     |              1 |
-| A1794500606957    | DA_PHAN_HOI |             1 |     2 | Synthetic score boundary 2                     |              1 |
-| A1794500607033    | DA_PHAN_HOI |             1 |     3 | Synthetic score boundary 3                     |              1 |
-| A1794500607110    | DA_PHAN_HOI |             1 |     4 | Synthetic score boundary 4                     |              1 |
-| A1794500607188    | DA_GUI      |             1 |  NULL | NULL                                           |              0 |
-| R1794500607395    | CHO_GUI     |             0 |  NULL | NULL                                           |              0 |
+| A1794501102229    | DA_PHAN_HOI |             1 |     1 | Synthetic score boundary 1                     |              1 |
+| A1794501102359    | DA_PHAN_HOI |             1 |     2 | Synthetic score boundary 2                     |              1 |
+| A1794501102435    | DA_PHAN_HOI |             1 |     3 | Synthetic score boundary 3                     |              1 |
+| A1794501102518    | DA_PHAN_HOI |             1 |     4 | Synthetic score boundary 4                     |              1 |
+| A1794501102591    | DA_GUI      |             1 |  NULL | NULL                                           |              0 |
+| R1794501102801    | CHO_GUI     |             0 |  NULL | NULL                                           |              0 |
 +-------------------+-------------+---------------+-------+------------------------------------------------+----------------+
 +-----------------------------+------------------------------------+-----------------+
 | TABLE_NAME                  | CONSTRAINT_NAME                    | CONSTRAINT_TYPE |

@@ -14,11 +14,11 @@
 | Ngày cập nhật | 12/11/2026 |
 | Remote cấu hình trong Git | [github.com/nhan231105/cdtn1-05](https://github.com/nhan231105/cdtn1-05) |
 | Branch thực hiện | feat/bt2-setup |
-| Tag nộp v0.2 | Đối chiếu trạng thái Git cuối trước khi xác nhận |
+| Tag nộp v0.2 | Annotated tag phát hành từ merge commit `main` chứa báo cáo này; hash và trạng thái remote ghi tại [checkpoint 3](../checkpoint-3.md) |
 
 Phân hệ tiếp nối thiết kế BT1 trên cùng repository Spring Boot/React/MySQL. Khi phiếu bảo hành đã đóng, L8 tạo lời mời, gửi qua SMS/Zalo giả lập, thu một phản hồi CSAT bất biến và cung cấp tra cứu/thống kê/Excel theo vai trò. Không có edit/delete phản hồi hoặc CRUD dữ liệu L2/L4 chỉ để đạt rubric.
 
-**Kết quả cập nhật 12/11:** 54 backend tests PASS (0 fail/error/skip), 18 frontend tests PASS, production build PASS; browser E2E/API checks chạy trên MySQL test mới. Backend áp dụng V1–V6 trên MySQL 8.0.46 tạm cổng 3307. Đo local: NFR01 p95 46 ms/100 client, NFR02 p95 362 ms/50 client, NFR03 p95 75/41/71 ms trên 10.000 phản hồi, NFR05 1/100 POST đồng thời tạo phản hồi và NFR06 500/500 gửi qua gateway giả lập trong 7,012 giây. Chi tiết và giới hạn: [bảng xác minh](../verification-2026-11-12.md). Không sửa/xóa database đang sử dụng.
+**Kết quả cập nhật 12/11:** trong clone sạch, 54 backend tests PASS (0 fail/error/skip), 18 frontend tests PASS, production build PASS và browser E2E 1/1 PASS. Backend áp dụng V1–V6 trên MySQL 8.0.46 tạm cổng 3307. Đo local: NFR01 p95 128 ms/100 client, NFR02 p95 381 ms/50 client, NFR03 p95 80/41/83 ms trên 10.000 phản hồi, NFR05 1/100 POST đồng thời tạo phản hồi và NFR06 500/500 gửi qua gateway giả lập trong 6,192 giây. Chi tiết và giới hạn: [bảng xác minh](../verification-2026-11-12.md). Không sửa/xóa database đang sử dụng.
 
 **Giới hạn công khai:** S1 có CRUD lời mời theo vòng đời và CRUD mẫu khảo sát; cách tính điểm rubric vẫn **chờ xác nhận học thuật**. NFR01/02 dùng MockMvc, NFR03 dùng loopback/MySQL test, không đại diện mạng 4G hoặc máy production. NFR04 chưa kiểm nhiều instance; NFR07 chưa thử với 5 người thật. SMS/Zalo vẫn giả lập; file hướng dẫn `Codex_SmartCRM_L8_BT2_HoanThien.md` không tìm thấy. Không suy rộng kết quả test cục bộ thành nghiệm thu production.
 
@@ -112,7 +112,7 @@ Frontend `npm test`:18 PASS; `npm run build` PASS. UI tests mock HTTP cho loadin
 
 Lỗi đã xử lý: khóa read-only sai tách query lock riêng; fixture phone vượt cột sửa đúng tình huống; DA_GUI bổ sung theo SRS; jar Windows bị JVM E2E giữ đã dừng đúng JVM rồi rerun full suite. MySQL Windows monitor tạo child: lấy actual listenerPID và shutdown kiểm datadir sở hữu. Không bỏ/skip test lỗi.
 
-Lượt xác minh ngày 12/11: frontend npmci+18tests+buildPASS; backend `powershell -File scripts/test.ps1`54PASS trên MySQL8.0.46 mới riêng V1–V6. Datasource được ép sang server/schema test mà script sở hữu, không nhận TEST_DB_* kế thừa. E2E/browser checks chạy trên DB test mới; backend, Vite và MySQL tạm đã dừng, các cổng test rảnh. Không dùng DB cá nhân và không coi đây là phép thử trên máy khác/cache trống.
+Lượt clean clone commit `b5199d5` ngày 12/11: `npm ci` cài từ lockfile, frontend18tests+buildPASS, backend `powershell -File scripts/test.ps1`54PASS trên MySQL8.0.46 mới riêng V1–V6, E2E/browser checks PASS. Datasource được ép sang server/schema test mà script sở hữu, không nhận TEST_DB_* kế thừa. Backend, Vite và MySQL tạm đã dừng; các cổng test rảnh. Không dùng DB cá nhân và không coi đây là phép thử trên máy khác/cache trống.
 
 README: JDK21, Maven wrapper, MySQL8, Node24/npmci; .env nạp thủ công, secrets tự cấp. Service/JWT≥32byte; bootstrap tắt mặc định; không secret trình duyệt. Lệnh chạy/test ở [README](../../README.md).
 
@@ -160,12 +160,12 @@ UI tests còn kiểm lỗi kết nối/retry, giữ form khi503, không request 
 
 | Mã | Trạng thái | Bằng chứng / phần còn lại |
 |---|---|---|
-| C1 | DONE có giới hạn | Source copy sạch cùng máy, backend54/frontend18+build; không thay kiểm chứng trên máy khác |
+| C1 | DONE có giới hạn | Clone sạch commit b5199d5: backend54/frontend18+build/E2E; không thay kiểm chứng trên máy khác |
 | C2 | DONE | Controller→Service→Repository; SQL gồm scheduler ở repositories; static+integration/E2E |
 | C3 | DONE | Closed-only, unique, expiry, immutable, scope, retry có tests |
 | C4 | DONE | Backend54PASS0fail/error/skip, FE18+build; có đúng/biên/sai |
 | C5 | DONE | Migration V1–V6 trên schema rỗng; scheduler/idempotency/concurrency được kiểm |
-| C6 | Chờ Git cuối | POM/wrapper/npm lock, envexample/ignore; commit/clone/push/tag cần đối chiếu cuối |
+| C6 | DONE cục bộ | POM/wrapper/npm lock và envexample đã commit; push/main/tag được ghi tại checkpoint sau phát hành |
 | C7 | DONE | Structured validation/auth/filter/token error; không lỗi thô; UI giữform/retry |
 | S1 | Chờ xác nhận học thuật | CRUD lời mời theo vòng đời và CRUD mẫu khảo sát có tests; không sửa response/L2/L4 |
 | S2 | DONE | Service business code/dữ liệu thuần, không HTTP/status/SQL |
@@ -174,7 +174,7 @@ UI tests còn kiểm lỗi kết nối/retry, giữ form khi503, không request 
 
 NFR01/02/03/05/06 đã có phép đo cục bộ mới, nhưng NFR01/02 không mô phỏng 4G/TCP và NFR03 dùng loopback/MySQL test. NFR04 rate-limit một instance, chưa phân tán/pentest. NFR07 chưa thử 5 người/30giây/3chạm. NFR08 E2E phản hồi mới hiện ngay, không suy ra tải lớn.
 
-Thiếu file `Codex_SmartCRM_L8_BT2_HoanThien.md`; docs/requirements chưa có trong repo, đề/học liệu thư mụccha đã đối chiếu. SMS/Zalo giả lập theo A02; event/tên thiết bị L2/L4 thật ngoài phạm vi. Chưa push/merge/tag/nộp E-learning.
+Thiếu file `Codex_SmartCRM_L8_BT2_HoanThien.md`; docs/requirements chưa có trong repo, đề/học liệu thư mụccha đã đối chiếu. SMS/Zalo giả lập theo A02; event/tên thiết bị L2/L4 thật ngoài phạm vi. Trạng thái Git cuối ghi trong checkpoint 3; chưa nộp E-learning.
 
 ### Phụ lục AI và nguồn
 

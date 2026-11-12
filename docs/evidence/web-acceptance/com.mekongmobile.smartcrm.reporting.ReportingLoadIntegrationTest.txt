@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.mekongmobile.smartcrm.reporting.ReportingLoadIntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 56.30 s -- in com.mekongmobile.smartcrm.reporting.ReportingLoadIntegrationTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.47 s -- in com.mekongmobile.smartcrm.reporting.ReportingLoadIntegrationTest

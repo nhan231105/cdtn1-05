@@ -128,17 +128,17 @@ Phần trên giữ nguyên baseline và kết quả ngày 03/11. Đối chiếu 
 |---|---|---|
 | UC01–09 và EP1–9 | PASS chức năng | Mã backend/frontend hiện có; E2E thật, API/browser checks và DB V1–V6 ở `docs/evidence/web-acceptance/`. |
 | CRUD S1 | Có mã/test; chờ xác nhận học thuật | Lời mời có list/detail/PATCH kênh trước gửi/DELETE vật lý khi chưa gửi; cancellation tombstone chặn tái phát hành. Marketing có CRUD mẫu khảo sát; nội dung được snapshot vào invitation. Không sửa/xóa response, không CRUD bảng L2/L4. `SurveyFlowIntegrationTest` kiểm tra role, validation, lifecycle và snapshot. |
-| C1/C4/S3 | PASS cục bộ; clone theo tag còn chờ | `scripts/test.ps1`: 54 tests PASS, 0 fail/error/skip; V1–V6 trên MySQL 8.0.46 tạm mới cổng3307. npm test 18 PASS/build PASS. Sẽ thử bản clone sạch sau commit; hiện chưa là bằng chứng máy khác/cache trống. |
-| C6 | PARTIAL trước commit | `.env.example`, Maven/npm lockfile có; `.env` bị ignore và không tracked. Phần “đã commit” chỉ được tính sau khi commit kiểm tra sạch. |
-| NFR01 | Có số đo cục bộ; chưa đủ điều kiện SRS | MockMvc 100 client/IP riêng, p95 46 ms/max230 ms. Không mô phỏng mạng 4G và không qua TCP thật. |
-| NFR02 | Có số đo cục bộ; chưa đủ điều kiện SRS | MockMvc 50 client/IP riêng, p95 362 ms/max364 ms; 50 token khác nhau, 50 phản hồi được lưu. Không mô phỏng mạng ngoài. |
-| NFR03 | Có số đo local MySQL test | 10.000 response; 20 HTTP samples mỗi endpoint: KTV p95 75/max219 ms, trung tâm 41/45 ms, danh sách 71/72 ms. |
+| C1/C4/S3 | PASS trên clone sạch cùng máy | Checkout `b5199d5`: `npm ci`, backend54PASS, frontend18PASS/build PASS, E2E1PASS; V1–V6 áp dụng trên MySQL8.0.46 mới. Không đại diện máy khác. |
+| C6 | DONE | `.env.example`, Maven/npm lockfile và cấu hình mẫu đã commit; `.env` bị ignore và không tracked. |
+| NFR01 | PASS ngưỡng cục bộ; giới hạn SRS còn lại | MockMvc 100 client/IP riêng, p95 128 ms/max180 ms. Không mô phỏng mạng 4G và không qua TCP thật. |
+| NFR02 | PASS ngưỡng cục bộ; giới hạn mạng | MockMvc 50 client/IP riêng, p95 381 ms/max383 ms; 50 token khác nhau, 50 phản hồi lưu thành công. Không mô phỏng TCP/4G. |
+| NFR03 | PASS theo ngưỡng test local | 10.000 response; 20 HTTP samples mỗi endpoint: KTV p95 80/max222 ms, trung tâm 41/52 ms, danh sách 83/86 ms. |
 | NFR04 | PARTIAL | 11 request/phút/IP trả429 và token 256 bit đã test; limiter hiện giữ trạng thái trong một instance, chưa kiểm nhiều instance/proxy/pentest. |
 | NFR05 | PASS trong test servlet/DB đơn instance | 100 POST đồng thời qua controller+filter và 100 IP test: 1×201, 99×409, DB đúng một response. Chưa thử nhiều instance. |
-| NFR06 | PASS với gateway giả lập | Scheduler xử lý 500 phiếu: 500/500 gửi trong vòng 5 phút, 6 tick, 7.012 ms; không gọi SMS/Zalo nhà cung cấp thật. |
+| NFR06 | PASS với gateway giả lập | Scheduler xử lý 500 phiếu: 500/500 gửi trong vòng 5 phút, 6 tick, 6.192 ms; không gọi SMS/Zalo nhà cung cấp thật. |
 | NFR07 | Chưa kiểm chứng người dùng | Có [kế hoạch/phiếu ghi nhận](usability-test-plan.md); chưa có 5 người tham gia và không tạo dữ liệu giả. |
 | NFR08 | PASS luồng chức năng | E2E gửi xong thấy dữ liệu ở list/statistics; không suy rộng thành tải lớn. |
-| Tái lập | PASS trên source hiện tại; clone sạch còn chờ | E2E một journey PASS và browser/API checks PASS trên schema test mới; server test đã dừng, cổng3307/8080/5173 trống. |
+| Tái lập | PASS trên clone sạch cùng máy | `npm ci`, backend/frontend suites, build và E2E 1/1 PASS trên commit `b5199d5`; MySQL test, backend, Vite đã dừng. |
 | File hướng dẫn riêng | NOT_FOUND | `Codex_SmartCRM_L8_BT2_HoanThien.md` không thấy trong repository, Downloads hoặc cây `D:\cdtn1` tại lượt kiểm này. |
 
 Thay đổi S1 cần giảng viên xác nhận về cách tính CRUD có điều kiện theo vòng đời. Không ghi nhận việc đã được duyệt. Xem [checkpoint3](checkpoint-3.md), [bảng xác minh](verification-2026-11-12.md), [ERD V6](erd-l8-extension.md) và [bằng chứng trình duyệt mới](evidence/web-acceptance/README.md). Báo cáo 03/11 được giữ trong `docs/evidence/web-acceptance-2026-11-03/`.

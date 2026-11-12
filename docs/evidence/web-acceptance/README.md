@@ -1,11 +1,11 @@
 # Evidence nghiệm thu website 12/11/2026
 
-Lượt hiện tại: MySQL 8.0.46 test mới, Flyway V1–V6, E2E 1/1 PASS (7,9 giây), browser/API checks PASS. Backend 54/54; frontend 18/18 và production build PASS. NFR result/limits ở [verification report](../../verification-2026-11-12.md). Bản 03/11 lưu tại `../web-acceptance-2026-11-03/`.
+Lượt hiện tại: MySQL 8.0.46 test mới, Flyway V1–V6, E2E 1/1 PASS (5,8 giây), browser/API checks PASS. Backend 54/54; frontend 18/18 và production build PASS. NFR result/limits ở [verification report](../../verification-2026-11-12.md). Bản 03/11 lưu tại `../web-acceptance-2026-11-03/`.
 
 Đọc [kết quả](../../web-acceptance-results.md), [test cases](../../web-acceptance-test-cases.md), [run guide](../../web-run-guide.md).
 
 - backend-tests.txt + com.*.txt: suite backend 54/54 từ 12/11 và báo cáo class; Maven XML gốc nằm trong target/surefire-reports (bị ignore).
-- frontend-tests.txt, frontend-build.txt: test/build frontend.
+- npm-ci.txt, frontend-tests.txt, frontend-build.txt: clean clone cài lockfile/test/build frontend.
 - e2e.log: suite Playwright 1/1 PASS, API/MySQL thật; e2e-attempt1.log là lượt runner dừng bởi warning, không phải PASS.
 - backend-startup.log / frontend-startup.log: startup8080/5173; log bị Git ignore, hiện vẫn tồn tại trên máy, không tự add/commit.
 - browser-checks.json / browser-run.log: asserts bổ sung, HTTPstatus/latency; surveytoken được thay [redacted].

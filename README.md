@@ -165,7 +165,7 @@ Fixture E2E chỉ chấp nhận schema `_test` ở cổng khác 3306, thêm tick
 
 ## Dựng lại và giới hạn nghiệm thu
 
-Trước nộp, thử trên bản checkout/thư mục mới: làm đúng hướng dẫn cấu hình, chạy test, mở ba màn hình, gửi phản hồi, rồi khởi động lại backend và đối chiếu số bản ghi/Flyway history. Không dùng `flyway:clean`, `DROP DATABASE`, xóa volume hoặc reset schema để tạo kết quả chạy lại. Clone theo tag chỉ thực hiện sau khi chủ repository duyệt commit/merge/tag.
+Đã kiểm tra clone Git sạch của `feat/bt2-setup` tại commit `b5199d5`: `npm ci`, 54 backend tests, 18 frontend tests, production build, E2E và browser/API checks PASS trên MySQL test mới. Kết quả chỉ xác minh cùng máy; không dùng `flyway:clean`, `DROP DATABASE`, xóa volume hoặc reset schema để tạo lại dữ liệu. Tình trạng push/merge/tag xem tại [checkpoint 3](docs/checkpoint-3.md).
 
 S1 hiện có CRUD có điều kiện cho lời mời và CRUD mẫu khảo sát thuộc L8. Cách tính điểm rubric vẫn **chờ xác nhận học thuật**; phản hồi bất biến và bảng L2/L4 chỉ đọc. NFR01/02 được đo bằng MockMvc, NFR03 trên loopback/MySQL test, NFR05 với 100 POST cạnh tranh và NFR06 qua gateway giả lập; giới hạn phép đo ở [bảng xác minh](docs/verification-2026-11-12.md). NFR07 chưa thử 5 người thật.
 

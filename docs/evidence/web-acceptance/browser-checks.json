@@ -4,7 +4,7 @@
       "method": "POST",
       "path": "/api/auth/login",
       "status": 401,
-      "ms": 128,
+      "ms": 121,
       "code": "UNAUTHENTICATED"
     },
     {
@@ -25,54 +25,54 @@
       "method": "POST",
       "path": "/api/survey-invitations",
       "status": 201,
-      "ms": 25
+      "ms": 19
     },
     {
       "method": "POST",
       "path": "/api/survey-invitations",
       "status": 409,
-      "ms": 25,
+      "ms": 23,
       "code": "INVITATION_ALREADY_EXISTS"
     },
     {
       "method": "POST",
       "path": "/api/survey-invitations",
       "status": 401,
-      "ms": 10,
+      "ms": 11,
       "code": "UNAUTHENTICATED"
     },
     {
       "method": "POST",
       "path": "/api/survey-invitations",
       "status": 401,
-      "ms": 4,
+      "ms": 14,
       "code": "UNAUTHENTICATED"
     },
     {
       "method": "GET",
       "path": "/api/survey-responses",
       "status": 401,
-      "ms": 12,
+      "ms": 17,
       "code": "UNAUTHENTICATED"
     },
     {
       "method": "GET",
       "path": "/api/survey-responses",
       "status": 401,
-      "ms": 12,
+      "ms": 2,
       "code": "UNAUTHENTICATED"
     },
     {
       "method": "POST",
       "path": "/api/survey-invitations/2/send",
       "status": 200,
-      "ms": 16
+      "ms": 22
     },
     {
       "method": "POST",
       "path": "/api/surveys/[redacted]/responses",
       "status": 409,
-      "ms": 18,
+      "ms": 17,
       "code": "ALREADY_RESPONDED"
     },
     {
@@ -219,13 +219,13 @@
       "method": "GET",
       "path": "/api/survey-responses",
       "status": 200,
-      "ms": 21
+      "ms": 14
     },
     {
       "method": "GET",
       "path": "/api/survey-responses?center_id=102",
       "status": 403,
-      "ms": 18,
+      "ms": 6,
       "code": "FORBIDDEN_SCOPE"
     },
     {
@@ -244,33 +244,33 @@
       "method": "POST",
       "path": "/api/surveys/[redacted]/responses",
       "status": 400,
-      "ms": 8,
+      "ms": 19,
       "code": "VALIDATION_FAILED"
     },
     {
       "method": "POST",
       "path": "/api/surveys/[redacted]/responses",
       "status": 400,
-      "ms": 14,
+      "ms": 16,
       "code": "VALIDATION_FAILED"
     },
     {
       "method": "POST",
       "path": "/api/surveys/[redacted]/responses",
       "status": 201,
-      "ms": 12
+      "ms": 14
     },
     {
       "method": "POST",
       "path": "/api/survey-invitations",
       "status": 201,
-      "ms": 14
+      "ms": 13
     },
     {
       "method": "POST",
       "path": "/api/survey-invitations/4/send",
       "status": 200,
-      "ms": 13
+      "ms": 14
     },
     {
       "method": "POST",
@@ -288,25 +288,25 @@
       "method": "POST",
       "path": "/api/survey-invitations/5/send",
       "status": 200,
-      "ms": 14
+      "ms": 13
     },
     {
       "method": "POST",
       "path": "/api/surveys/[redacted]/responses",
       "status": 201,
-      "ms": 11
+      "ms": 14
     },
     {
       "method": "POST",
       "path": "/api/survey-invitations",
       "status": 201,
-      "ms": 12
+      "ms": 13
     },
     {
       "method": "POST",
       "path": "/api/survey-invitations/6/send",
       "status": 200,
-      "ms": 12
+      "ms": 11
     },
     {
       "method": "POST",
@@ -330,7 +330,7 @@
       "method": "GET",
       "path": "/api/surveys/[redacted]",
       "status": 410,
-      "ms": 6,
+      "ms": 7,
       "code": "SURVEY_EXPIRED"
     },
     {
@@ -344,13 +344,13 @@
       "method": "POST",
       "path": "/api/survey-invitations",
       "status": 201,
-      "ms": 14
+      "ms": 13
     },
     {
       "method": "POST",
       "path": "/api/survey-invitations",
       "status": 409,
-      "ms": 16,
+      "ms": 17,
       "code": "INVITATION_ALREADY_EXISTS"
     }
   ],

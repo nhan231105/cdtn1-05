@@ -1,6 +1,6 @@
 # Minh chứng trình duyệt thật – cập nhật 12/11/2026
 
-Ảnh và log trong thư mục `web-acceptance/` được cập nhật bằng lượt 12/11 qua React/Vite → Spring Boot → MySQL 8 test riêng cổng3307, schema mới V1–V6. Playwright 1/1 PASS (7,9 giây), browser/API checks PASS. Đã xem ảnh; không thấy token, mật khẩu hay số điện thoại đầy đủ. Dữ liệu fixture tổng hợp, tài khoản demo và nhãn #ID không phải dữ liệu vận hành Mekong Mobile. Bản minh chứng ngày 03/11 được lưu riêng tại [web-acceptance-2026-11-03](web-acceptance-2026-11-03/README.md). Chi tiết suite/NFR: [xác minh 12/11](../verification-2026-11-12.md).
+Ảnh và log trong thư mục `web-acceptance/` được cập nhật bằng lượt 12/11 qua React/Vite → Spring Boot → MySQL 8 test riêng cổng3307, schema mới V1–V6. Playwright 1/1 PASS (5,8 giây), browser/API checks PASS. Đã xem ảnh; không thấy token, mật khẩu hay số điện thoại đầy đủ. Dữ liệu fixture tổng hợp, tài khoản demo và nhãn #ID không phải dữ liệu vận hành Mekong Mobile. Bản minh chứng ngày 03/11 được lưu riêng tại [web-acceptance-2026-11-03](web-acceptance-2026-11-03/README.md). Chi tiết suite/NFR: [xác minh 12/11](../verification-2026-11-12.md).
 
 | Ảnh | Nội dung kiểm chứng |
 |---|---|
