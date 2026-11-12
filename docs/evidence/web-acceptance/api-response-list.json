@@ -1,0 +1,27 @@
+{
+  "page": 1,
+  "total": 2,
+  "size": 20,
+  "items": [
+    {
+      "response_id": 2,
+      "ticket_code": "DEMO-L8-0001",
+      "center_name": "Trung tam Tan Binh - DEMO",
+      "technician_name": "Kỹ thuật viên #301",
+      "score": 5,
+      "comment": "Nghiệm thu website: dữ liệu tổng hợp",
+      "customer_phone": "090****001",
+      "responded_at": "2026-11-12T23:30:35+07:00"
+    },
+    {
+      "response_id": 1,
+      "ticket_code": "E2E-1794501024767",
+      "center_name": "Trung tam Tan Binh - DEMO",
+      "technician_name": "Kỹ thuật viên #301",
+      "score": 5,
+      "comment": "Kiểm thử E2E: phục vụ nhiệt tình",
+      "customer_phone": "090****001",
+      "responded_at": "2026-11-12T23:30:28+07:00"
+    }
+  ]
+}

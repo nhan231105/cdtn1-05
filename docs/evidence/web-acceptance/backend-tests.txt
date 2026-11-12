@@ -1,0 +1,784 @@
+[INFO] Scanning for projects...
+[INFO] Loaded 24463 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO]
+[INFO] ----------------------< com.mekongmobile:backend >----------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24463 auto-discovered prefixes for remote repository maven-central (prefixes-maven-central.txt)
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to flyway-community-db-support (https://maven.pkg.github.com/flyway/flyway-community-db-support): HTTP Status: 401
+[WARNING] Could not transfer metadata /.meta/prefixes.txt from/to MavenFeed (https://red-gate.pkgs.visualstudio.com/MavenFeed/_packaging/MavenFeed/maven/v1/): HTTP Status: 401
+[INFO]
+[INFO] --- resources:3.5.0:resources (default-resources) @ backend ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 6 resources from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.15.0:compile (default-compile) @ backend ---
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 45 source files with javac [debug parameters release 21] to target\classes
+[INFO]
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ backend ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO]
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ backend ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 15 source files with javac [debug parameters release 21] to target\test-classes
+[INFO]
+[INFO] --- surefire:3.5.6:test (default-test) @ backend ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.mekongmobile.smartcrm.BackendApplicationTests
+23:27:58.055 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.BackendApplicationTests]: BackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:27:58.211 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.BackendApplicationTests
+23:27:58.330 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.BackendApplicationTests]: BackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:27:58.331 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.BackendApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-12T23:27:58.774+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.smartcrm.BackendApplicationTests     : Starting BackendApplicationTests using Java 21.0.12.1 with PID 1884 (started by vongu in C:\Users\vongu\AppData\Local\Temp\smartcrm-clean-check-b0113973865c4388a2ede4c476ff4b4b\checkout\backend)
+2026-11-12T23:27:58.776+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.smartcrm.BackendApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2026-11-12T23:27:59.692+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-12T23:27:59.785+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 3 JPA repository interfaces.
+2026-11-12T23:28:00.509+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-12T23:28:00.943+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d12429
+2026-11-12T23:28:00.946+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-12T23:28:00.988+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3307/smartcrm_l8_test?connectionTimeZone=Asia/Ho_Chi_Minh (MySQL 8.0)
+2026-11-12T23:28:01.093+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `smartcrm_l8_test`.`flyway_schema_history` does not exist yet
+2026-11-12T23:28:01.099+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.035s)
+2026-11-12T23:28:01.127+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `smartcrm_l8_test`.`flyway_schema_history` ...
+2026-11-12T23:28:01.217+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `smartcrm_l8_test`: << Empty Schema >>
+2026-11-12T23:28:01.237+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `smartcrm_l8_test` to version "1 - create l8 schema"
+2026-11-12T23:28:01.466+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `smartcrm_l8_test` to version "2 - seed l8 demo data"
+2026-11-12T23:28:01.509+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `smartcrm_l8_test` to version "3 - reporting reference and users"
+2026-11-12T23:28:01.619+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `smartcrm_l8_test` to version "4 - invitation retry time"
+2026-11-12T23:28:01.703+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `smartcrm_l8_test` to version "5 - reminder retry metadata"
+2026-11-12T23:28:01.788+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `smartcrm_l8_test` to version "6 - survey template and invitation crud"
+2026-11-12T23:28:01.889+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 6 migrations to schema `smartcrm_l8_test`, now at version v6 (execution time 00:00.487s)
+2026-11-12T23:28:02.075+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-12T23:28:02.213+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-12T23:28:02.837+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-12T23:28:02.962+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://127.0.0.1:3307/smartcrm_l8_test?connectionTimeZone=Asia/Ho_Chi_Minh]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: smartcrm_l8_test/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-12T23:28:04.055+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-12T23:28:04.108+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-12T23:28:04.416+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-12T23:28:05.416+07:00  WARN 1884 --- [smartcrm-l8-tests] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-12T23:28:06.161+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.smartcrm.BackendApplicationTests     : Started BackendApplicationTests in 7.741 seconds (process running for 9.452)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\vongu\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.15\byte-buddy-agent-1.18.15.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.241 s -- in com.mekongmobile.smartcrm.BackendApplicationTests
+[INFO] Running com.mekongmobile.smartcrm.reference.repository.CustomerRepositoryIntegrationTest
+2026-11-12T23:28:06.980+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.reference.repository.CustomerRepositoryIntegrationTest]: CustomerRepositoryIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T23:28:07.023+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.reference.repository.CustomerRepositoryIntegrationTest
+2026-11-12T23:28:07.028+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.reference.repository.CustomerRepositoryIntegrationTest]: CustomerRepositoryIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T23:28:07.030+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.reference.repository.CustomerRepositoryIntegrationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.210 s -- in com.mekongmobile.smartcrm.reference.repository.CustomerRepositoryIntegrationTest
+[INFO] Running com.mekongmobile.smartcrm.reference.repository.TicketRepositoryIntegrationTest
+2026-11-12T23:28:07.192+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.reference.repository.TicketRepositoryIntegrationTest]: TicketRepositoryIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T23:28:07.195+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.reference.repository.TicketRepositoryIntegrationTest
+2026-11-12T23:28:07.198+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.reference.repository.TicketRepositoryIntegrationTest]: TicketRepositoryIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T23:28:07.200+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.reference.repository.TicketRepositoryIntegrationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 s -- in com.mekongmobile.smartcrm.reference.repository.TicketRepositoryIntegrationTest
+[INFO] Running com.mekongmobile.smartcrm.reporting.ReportFilterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in com.mekongmobile.smartcrm.reporting.ReportFilterTest
+[INFO] Running com.mekongmobile.smartcrm.reporting.ReportingIntegrationTest
+2026-11-12T23:28:07.284+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.reporting.ReportingIntegrationTest]: ReportingIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T23:28:07.321+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.reporting.ReportingIntegrationTest
+2026-11-12T23:28:07.323+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.reporting.ReportingIntegrationTest]: ReportingIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T23:28:07.324+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.reporting.ReportingIntegrationTest
+2026-11-12T23:28:07.847+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-12T23:28:07.847+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-12T23:28:07.848+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.117 s -- in com.mekongmobile.smartcrm.reporting.ReportingIntegrationTest
+[INFO] Running com.mekongmobile.smartcrm.reporting.ReportingLoadIntegrationTest
+2026-11-12T23:28:08.403+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.reporting.ReportingLoadIntegrationTest]: ReportingLoadIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T23:28:08.404+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.reporting.ReportingLoadIntegrationTest
+2026-11-12T23:28:08.405+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.reporting.ReportingLoadIntegrationTest]: ReportingLoadIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T23:28:08.406+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.reporting.ReportingLoadIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-12T23:28:08.450+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.r.ReportingLoadIntegrationTest     : Starting ReportingLoadIntegrationTest using Java 21.0.12.1 with PID 1884 (started by vongu in C:\Users\vongu\AppData\Local\Temp\smartcrm-clean-check-b0113973865c4388a2ede4c476ff4b4b\checkout\backend)
+2026-11-12T23:28:08.451+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.r.ReportingLoadIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2026-11-12T23:28:08.669+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-12T23:28:08.703+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2026-11-12T23:28:09.093+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-11-12T23:28:09.119+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-12T23:28:09.120+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-12T23:28:09.206+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 754 ms
+2026-11-12T23:28:09.337+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-11-12T23:28:09.356+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@427475a2
+2026-11-12T23:28:09.356+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-11-12T23:28:09.358+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3307/smartcrm_l8_test?connectionTimeZone=Asia/Ho_Chi_Minh (MySQL 8.0)
+2026-11-12T23:28:09.401+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.019s)
+2026-11-12T23:28:09.412+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `smartcrm_l8_test`: 6
+2026-11-12T23:28:09.413+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbMigrate      : Schema `smartcrm_l8_test` is up to date. No migration necessary.
+2026-11-12T23:28:09.441+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-12T23:28:09.480+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-12T23:28:09.485+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://127.0.0.1:3307/smartcrm_l8_test?connectionTimeZone=Asia/Ho_Chi_Minh]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: smartcrm_l8_test/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-12T23:28:09.596+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-12T23:28:09.614+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-12T23:28:09.841+07:00  WARN 1884 --- [smartcrm-l8-tests] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-12T23:28:10.007+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 59288 (http) with context path '/'
+2026-11-12T23:28:10.012+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.r.ReportingLoadIntegrationTest     : Started ReportingLoadIntegrationTest in 1.6 seconds (process running for 13.302)
+2026-11-12T23:29:02.248+07:00  INFO 1884 --- [smartcrm-l8-tests] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-12T23:29:02.249+07:00  INFO 1884 --- [smartcrm-l8-tests] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-12T23:29:02.250+07:00  INFO 1884 --- [smartcrm-l8-tests] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+NFR03 API=/api/survey-stats/by-technician rows=10000 samples=20 p95_ms=80 max_ms=222 machine=local-loopback/mysql-test
+NFR03 API=/api/survey-stats/by-center rows=10000 samples=20 p95_ms=41 max_ms=52 machine=local-loopback/mysql-test
+NFR03 API=/api/survey-responses rows=10000 samples=20 p95_ms=83 max_ms=86 machine=local-loopback/mysql-test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.47 s -- in com.mekongmobile.smartcrm.reporting.ReportingLoadIntegrationTest
+[INFO] Running com.mekongmobile.smartcrm.reporting.ResponseWorkbookTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.346 s -- in com.mekongmobile.smartcrm.reporting.ResponseWorkbookTest
+[INFO] Running com.mekongmobile.smartcrm.survey.dto.SendSurveyInvitationRequestTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.116 s -- in com.mekongmobile.smartcrm.survey.dto.SendSurveyInvitationRequestTest
+[INFO] Running com.mekongmobile.smartcrm.survey.gateway.SimulatedSurveyMessageGatewayTest
+2026-11-12T23:29:06.333+07:00  WARN 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated gateway failure; channel=SMS
+2026-11-12T23:29:06.335+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.mekongmobile.smartcrm.survey.gateway.SimulatedSurveyMessageGatewayTest
+[INFO] Running com.mekongmobile.smartcrm.survey.security.ServiceKeyFilterTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in com.mekongmobile.smartcrm.survey.security.ServiceKeyFilterTest
+[INFO] Running com.mekongmobile.smartcrm.survey.service.SurveyApiLoadIntegrationTest
+2026-11-12T23:29:06.364+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.survey.service.SurveyApiLoadIntegrationTest]: SurveyApiLoadIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T23:29:06.388+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.survey.service.SurveyApiLoadIntegrationTest
+2026-11-12T23:29:06.389+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.survey.service.SurveyApiLoadIntegrationTest]: SurveyApiLoadIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T23:29:06.391+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.survey.service.SurveyApiLoadIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-12T23:29:06.414+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.s.SurveyApiLoadIntegrationTest   : Starting SurveyApiLoadIntegrationTest using Java 21.0.12.1 with PID 1884 (started by vongu in C:\Users\vongu\AppData\Local\Temp\smartcrm-clean-check-b0113973865c4388a2ede4c476ff4b4b\checkout\backend)
+2026-11-12T23:29:06.414+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.s.SurveyApiLoadIntegrationTest   : No active profile set, falling back to 1 default profile: "default"
+2026-11-12T23:29:06.617+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-12T23:29:06.649+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.
+2026-11-12T23:29:07.205+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-11-12T23:29:07.207+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-12T23:29:07.208+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-12T23:29:07.294+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 877 ms
+2026-11-12T23:29:07.440+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-11-12T23:29:07.509+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e07469a
+2026-11-12T23:29:07.509+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-11-12T23:29:07.513+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3307/smartcrm_l8_test?connectionTimeZone=Asia/Ho_Chi_Minh (MySQL 8.0)
+2026-11-12T23:29:07.584+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.026s)
+2026-11-12T23:29:07.608+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `smartcrm_l8_test`: 6
+2026-11-12T23:29:07.611+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.f.core.internal.command.DbMigrate      : Schema `smartcrm_l8_test` is up to date. No migration necessary.
+2026-11-12T23:29:07.698+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-12T23:29:07.769+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-12T23:29:07.776+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://127.0.0.1:3307/smartcrm_l8_test?connectionTimeZone=Asia/Ho_Chi_Minh]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: smartcrm_l8_test/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-12T23:29:08.165+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-12T23:29:08.214+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-12T23:29:08.632+07:00  WARN 1884 --- [smartcrm-l8-tests] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-11-12T23:29:08.917+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 59310 (http) with context path '/'
+2026-11-12T23:29:08.924+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.s.SurveyApiLoadIntegrationTest   : Started SurveyApiLoadIntegrationTest in 2.529 seconds (process running for 72.214)
+2026-11-12T23:29:12.452+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring TestDispatcherServlet ''
+2026-11-12T23:29:12.453+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-12T23:29:12.456+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+NFR02 local servlet baseline: clients=50 p95_ms=381 max_ms=383 network=MockMvc-not-4G
+2026-11-12T23:29:15.848+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring TestDispatcherServlet ''
+2026-11-12T23:29:15.848+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-12T23:29:15.850+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+NFR01 local servlet baseline: clients=100 p95_ms=128 max_ms=180 network=MockMvc-not-4G
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.690 s -- in com.mekongmobile.smartcrm.survey.service.SurveyApiLoadIntegrationTest
+[INFO] Running com.mekongmobile.smartcrm.survey.service.SurveyDeliveryLoadIntegrationTest
+2026-11-12T23:29:16.066+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.survey.service.SurveyDeliveryLoadIntegrationTest]: SurveyDeliveryLoadIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T23:29:16.069+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.survey.service.SurveyDeliveryLoadIntegrationTest
+2026-11-12T23:29:16.070+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.survey.service.SurveyDeliveryLoadIntegrationTest]: SurveyDeliveryLoadIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T23:29:16.073+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.survey.service.SurveyDeliveryLoadIntegrationTest
+2026-11-12T23:29:17.777+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.784+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.791+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.797+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.802+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.808+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.815+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.821+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.826+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.832+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.838+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.843+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.848+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.854+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.860+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.866+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.873+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.880+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.886+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.892+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.897+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.905+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.913+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.922+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.929+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.936+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.942+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.947+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.953+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.959+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.966+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.972+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.978+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.985+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.992+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:17.998+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.004+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.012+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.022+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.030+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.037+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.043+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.049+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.056+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.062+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.069+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.076+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.083+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.089+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.096+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.102+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.108+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.115+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.125+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.133+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.140+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.146+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.151+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.158+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.164+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.170+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.176+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.182+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.187+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.192+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.198+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.203+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.210+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.216+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.223+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.232+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.242+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.247+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.253+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.258+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.263+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.269+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.275+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.281+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.286+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.293+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.298+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.304+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.310+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.315+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.320+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.325+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.331+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.341+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.349+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.356+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.362+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.368+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.375+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.382+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.387+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.393+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.399+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.404+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:18.410+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.010+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.015+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.020+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.027+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.032+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.037+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.045+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.052+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.058+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.064+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.069+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.074+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.081+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.086+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.093+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.101+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.107+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.114+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.121+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.127+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.132+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.138+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.143+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.149+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.155+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.161+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.167+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.172+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.178+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.185+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.190+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.197+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.202+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.210+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.218+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.225+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.230+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.236+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.242+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.247+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.253+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.258+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.263+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.268+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.272+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.277+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.283+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.289+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.295+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.301+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.307+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.313+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.321+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.330+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.336+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.342+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.349+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.358+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.363+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.368+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.374+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.380+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.386+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.392+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.397+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.403+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.410+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.415+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.420+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.428+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.433+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.439+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.444+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.450+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.458+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.464+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.468+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.475+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.480+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.486+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.491+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.496+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.503+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.509+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.515+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.520+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.525+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.531+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.539+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.547+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.555+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.563+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.569+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.573+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.578+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.585+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.591+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.596+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.602+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:19.610+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.232+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.238+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.243+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.248+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.254+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.260+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.266+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.272+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.279+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.284+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.289+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.297+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.304+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.309+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.315+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.322+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.327+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.333+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.339+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.343+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.348+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.354+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.362+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.369+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.375+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.380+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.386+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.392+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.397+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.405+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.411+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.418+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.426+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.432+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.437+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.443+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.448+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.453+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.458+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.463+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.469+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.475+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.481+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.486+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.491+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.495+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.499+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.503+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.508+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.514+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.518+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.524+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.529+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.534+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.540+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.545+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.550+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.555+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.561+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.566+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.571+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.577+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.582+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.586+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.591+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.596+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.601+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.607+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.613+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.619+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.628+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.637+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.646+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.654+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.659+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.666+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.672+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.678+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.684+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.689+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.694+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.699+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.704+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.710+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.716+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.722+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.731+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.739+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.747+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.752+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.757+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.763+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.768+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.773+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.779+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.784+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.789+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.794+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.798+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:20.802+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.428+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.433+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.439+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.444+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.449+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.454+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.458+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.462+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.468+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.472+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.477+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.482+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.487+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.496+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.504+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.511+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.516+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.522+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.528+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.533+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.540+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.546+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.551+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.557+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.561+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.566+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.571+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.577+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.582+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.586+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.592+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.597+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.605+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.612+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.618+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.623+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.628+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.633+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.640+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.646+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.651+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.657+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.664+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.670+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.676+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.681+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.686+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.693+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.699+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.704+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.709+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.716+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.723+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.730+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.736+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.742+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.748+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.754+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.760+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.765+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.771+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.776+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.782+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.787+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.793+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.799+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.804+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.808+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.813+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.818+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.824+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.831+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.837+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.843+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.850+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.857+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.862+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.867+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.872+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.878+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.884+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.889+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.896+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.902+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.908+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.913+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.919+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.924+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.929+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.937+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.945+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.952+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.959+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.966+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.972+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.978+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.984+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.989+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:21.997+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.004+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.626+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.631+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.638+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.644+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.649+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.654+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.659+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.664+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.669+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.674+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.679+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.684+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.690+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.699+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.706+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.712+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.717+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.722+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.728+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.734+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.738+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.745+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.749+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.754+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.759+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.763+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.768+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.772+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.778+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.784+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.791+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.796+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.801+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.810+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.830+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.837+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.844+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.850+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.857+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.861+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.867+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.871+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.875+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.880+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.885+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.892+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.897+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.902+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.908+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.913+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.922+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.931+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.941+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.948+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.954+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.959+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.966+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.973+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.979+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.986+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:22.993+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.000+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.006+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.012+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.018+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.023+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.032+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.039+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.045+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.052+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.058+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.064+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.068+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.074+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.079+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.085+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.090+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.096+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.104+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.109+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.115+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.121+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.127+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.133+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.142+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.149+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.155+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.161+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.169+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.176+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.181+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.187+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.192+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.200+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.206+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.213+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.219+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.226+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.232+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.238+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.294+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.300+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+2026-11-12T23:29:23.307+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.g.SimulatedSurveyMessageGateway  : Simulated message accepted; channel=SMS
+NFR06 benchmark: tickets=500 sent=500 within_5m=500 ticks=6 elapsed_ms=6192 gateway=simulated
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.261 s -- in com.mekongmobile.smartcrm.survey.service.SurveyDeliveryLoadIntegrationTest
+[INFO] Running com.mekongmobile.smartcrm.survey.service.SurveyFlowIntegrationTest
+2026-11-12T23:29:23.326+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.survey.service.SurveyFlowIntegrationTest]: SurveyFlowIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T23:29:23.328+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.survey.service.SurveyFlowIntegrationTest
+2026-11-12T23:29:23.329+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mekongmobile.smartcrm.survey.service.SurveyFlowIntegrationTest]: SurveyFlowIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-12T23:29:23.331+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mekongmobile.smartcrm.BackendApplication for test class com.mekongmobile.smartcrm.survey.service.SurveyFlowIntegrationTest
+2026-11-12T23:29:23.390+07:00  INFO 1884 --- [smartcrm-l8-tests] [o-auto-2-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-12T23:29:23.390+07:00  INFO 1884 --- [smartcrm-l8-tests] [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-12T23:29:23.392+07:00  INFO 1884 --- [smartcrm-l8-tests] [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-11-12T23:29:27.890+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring TestDispatcherServlet ''
+2026-11-12T23:29:27.891+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-12T23:29:27.892+07:00  INFO 1884 --- [smartcrm-l8-tests] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-11-12T23:29:28.140+07:00  WARN 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.service.SurveyDeliveryService    : Reminder gateway failed for invitation 10685
+2026-11-12T23:29:28.156+07:00  WARN 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.service.SurveyDeliveryService    : Reminder gateway failed for invitation 10685
+2026-11-12T23:29:28.180+07:00  WARN 1884 --- [smartcrm-l8-tests] [           main] c.m.s.s.service.SurveyDeliveryService    : Reminder gateway failed for invitation 10685
+2026-11-12T23:29:28.832+07:00  WARN 1884 --- [smartcrm-l8-tests] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 1644, SQLState: 45000
+2026-11-12T23:29:28.832+07:00  WARN 1884 --- [smartcrm-l8-tests] [           main] org.hibernate.orm.jdbc.error             : test failure
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.809 s -- in com.mekongmobile.smartcrm.survey.service.SurveyFlowIntegrationTest
+[INFO] Running com.mekongmobile.smartcrm.survey.service.SurveyInvitationServiceTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.620 s -- in com.mekongmobile.smartcrm.survey.service.SurveyInvitationServiceTest
+[INFO] Running com.mekongmobile.smartcrm.survey.service.SurveyPhoneValidatorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.mekongmobile.smartcrm.survey.service.SurveyPhoneValidatorTest
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 54, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:42 min
+[INFO] Finished at: 2026-11-12T23:29:30+07:00
+[INFO] ------------------------------------------------------------------------
+Test data and logs retained at C:\Users\vongu\AppData\Local\Temp\smartcrm-test-51a03d3245b845149d62ed5ca0199560. Existing MySQL untouched.

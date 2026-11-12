@@ -1,0 +1,363 @@
+{
+  "results": [
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 401,
+      "ms": 121,
+      "code": "UNAUTHENTICATED"
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations",
+      "status": 404,
+      "ms": 12,
+      "code": "TICKET_NOT_FOUND"
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations",
+      "status": 422,
+      "ms": 13,
+      "code": "TICKET_NOT_CLOSED"
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations",
+      "status": 201,
+      "ms": 19
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations",
+      "status": 409,
+      "ms": 23,
+      "code": "INVITATION_ALREADY_EXISTS"
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations",
+      "status": 401,
+      "ms": 11,
+      "code": "UNAUTHENTICATED"
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations",
+      "status": 401,
+      "ms": 14,
+      "code": "UNAUTHENTICATED"
+    },
+    {
+      "method": "GET",
+      "path": "/api/survey-responses",
+      "status": 401,
+      "ms": 17,
+      "code": "UNAUTHENTICATED"
+    },
+    {
+      "method": "GET",
+      "path": "/api/survey-responses",
+      "status": 401,
+      "ms": 2,
+      "code": "UNAUTHENTICATED"
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations/2/send",
+      "status": 200,
+      "ms": 22
+    },
+    {
+      "method": "POST",
+      "path": "/api/surveys/[redacted]/responses",
+      "status": 409,
+      "ms": 17,
+      "code": "ALREADY_RESPONDED"
+    },
+    {
+      "screen": "/thong-ke/ky-thuat-vien",
+      "user": "manager101",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "screen": "/thong-ke/ky-thuat-vien",
+      "user": "manager101",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "screen": "/thong-ke/ky-thuat-vien",
+      "user": "manager101",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "screen": "/thong-ke/ky-thuat-vien",
+      "user": "manager101",
+      "width": 375,
+      "height": 667,
+      "overflow": false
+    },
+    {
+      "screen": "/phan-hoi",
+      "user": "manager101",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "screen": "/phan-hoi",
+      "user": "manager101",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "screen": "/phan-hoi",
+      "user": "manager101",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "screen": "/phan-hoi",
+      "user": "manager101",
+      "width": 375,
+      "height": 667,
+      "overflow": false
+    },
+    {
+      "screen": "/thong-ke/ty-le",
+      "user": "manager101",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "screen": "/thong-ke/ty-le",
+      "user": "manager101",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "screen": "/thong-ke/ty-le",
+      "user": "manager101",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "screen": "/thong-ke/ty-le",
+      "user": "manager101",
+      "width": 375,
+      "height": 667,
+      "overflow": false
+    },
+    {
+      "screen": "/phan-hoi",
+      "user": "marketing",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "screen": "/phan-hoi",
+      "user": "marketing",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "screen": "/phan-hoi",
+      "user": "marketing",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "screen": "/phan-hoi",
+      "user": "marketing",
+      "width": 375,
+      "height": 667,
+      "overflow": false
+    },
+    {
+      "screen": "/thong-ke/trung-tam",
+      "user": "director",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "screen": "/thong-ke/trung-tam",
+      "user": "director",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "screen": "/thong-ke/trung-tam",
+      "user": "director",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "screen": "/thong-ke/trung-tam",
+      "user": "director",
+      "width": 375,
+      "height": 667,
+      "overflow": false
+    },
+    {
+      "method": "GET",
+      "path": "/api/survey-responses",
+      "status": 200,
+      "ms": 14
+    },
+    {
+      "method": "GET",
+      "path": "/api/survey-responses?center_id=102",
+      "status": 403,
+      "ms": 6,
+      "code": "FORBIDDEN_SCOPE"
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations",
+      "status": 201,
+      "ms": 16
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations/3/send",
+      "status": 200,
+      "ms": 16
+    },
+    {
+      "method": "POST",
+      "path": "/api/surveys/[redacted]/responses",
+      "status": 400,
+      "ms": 19,
+      "code": "VALIDATION_FAILED"
+    },
+    {
+      "method": "POST",
+      "path": "/api/surveys/[redacted]/responses",
+      "status": 400,
+      "ms": 16,
+      "code": "VALIDATION_FAILED"
+    },
+    {
+      "method": "POST",
+      "path": "/api/surveys/[redacted]/responses",
+      "status": 201,
+      "ms": 14
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations",
+      "status": 201,
+      "ms": 13
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations/4/send",
+      "status": 200,
+      "ms": 14
+    },
+    {
+      "method": "POST",
+      "path": "/api/surveys/[redacted]/responses",
+      "status": 201,
+      "ms": 11
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations",
+      "status": 201,
+      "ms": 12
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations/5/send",
+      "status": 200,
+      "ms": 13
+    },
+    {
+      "method": "POST",
+      "path": "/api/surveys/[redacted]/responses",
+      "status": 201,
+      "ms": 14
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations",
+      "status": 201,
+      "ms": 13
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations/6/send",
+      "status": 200,
+      "ms": 11
+    },
+    {
+      "method": "POST",
+      "path": "/api/surveys/[redacted]/responses",
+      "status": 201,
+      "ms": 11
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations",
+      "status": 201,
+      "ms": 12
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations/7/send",
+      "status": 200,
+      "ms": 14
+    },
+    {
+      "method": "GET",
+      "path": "/api/surveys/[redacted]",
+      "status": 410,
+      "ms": 7,
+      "code": "SURVEY_EXPIRED"
+    },
+    {
+      "method": "GET",
+      "path": "/api/surveys/[redacted]",
+      "status": 404,
+      "ms": 4,
+      "code": "SURVEY_NOT_FOUND"
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations",
+      "status": 201,
+      "ms": 13
+    },
+    {
+      "method": "POST",
+      "path": "/api/survey-invitations",
+      "status": 409,
+      "ms": 17,
+      "code": "INVITATION_ALREADY_EXISTS"
+    }
+  ],
+  "pageErrors": [],
+  "uiMocks": [
+    "503 error",
+    "empty"
+  ],
+  "loading": "delayed real request"
+}

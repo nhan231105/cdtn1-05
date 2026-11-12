@@ -1,0 +1,13 @@
+﻿
+> smartcrm-l8-frontend@1.0.0 test
+> vitest run
+
+
+ RUN  v5.1.0 D:/cdtn1/bt2/cdtn1-05-bt2/frontend
+
+
+ Test Files  2 passed (2)
+      Tests  17 passed (17)
+   Start at  08:36:30
+   Duration  3.98s (tests 45%, environment 45%, setup 7%, import 2%, transform 1%)
+

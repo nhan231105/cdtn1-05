@@ -1,0 +1,54 @@
+﻿+---------+-------------------------------+---------+
+| version | description                   | success |
++---------+-------------------------------+---------+
+| 1       | create l8 schema              |       1 |
+| 2       | seed l8 demo data             |       1 |
+| 3       | reporting reference and users |       1 |
+| 4       | invitation retry time         |       1 |
+| 5       | reminder retry metadata       |       1 |
++---------+-------------------------------+---------+
++-------------------+-------------+---------------+-------+------------------------------------------------+----------------+
+| ticket_code       | status      | send_attempts | score | comment                                        | response_count |
++-------------------+-------------+---------------+-------+------------------------------------------------+----------------+
+| E2E-1793669357022 | DA_PHAN_HOI |             1 |     5 | Kiểm thử E2E: phục vụ nhiệt tình               |              1 |
+| DEMO-L8-0001      | DA_PHAN_HOI |             1 |     5 | Nghiệm thu website: dữ liệu tổng hợp           |              1 |
+| A1793669430855    | DA_PHAN_HOI |             1 |     1 | Synthetic score boundary 1                     |              1 |
+| A1793669430966    | DA_PHAN_HOI |             1 |     2 | Synthetic score boundary 2                     |              1 |
+| A1793669431039    | DA_PHAN_HOI |             1 |     3 | Synthetic score boundary 3                     |              1 |
+| A1793669431111    | DA_PHAN_HOI |             1 |     4 | Synthetic score boundary 4                     |              1 |
+| A1793669431182    | DA_GUI      |             1 |  NULL | NULL                                           |              0 |
+| R1793669431382    | CHO_GUI     |             0 |  NULL | NULL                                           |              0 |
++-------------------+-------------+---------------+-------+------------------------------------------------+----------------+
++-----------------------+--------------------------+-----------------+
+| TABLE_NAME            | CONSTRAINT_NAME          | CONSTRAINT_TYPE |
++-----------------------+--------------------------+-----------------+
+| app_user              | PRIMARY                  | PRIMARY KEY     |
+| app_user              | username                 | UNIQUE          |
+| app_user              | app_user_ibfk_1          | FOREIGN KEY     |
+| app_user              | app_user_chk_1           | CHECK           |
+| app_user              | app_user_chk_2           | CHECK           |
+| customer              | phone                    | UNIQUE          |
+| customer              | PRIMARY                  | PRIMARY KEY     |
+| device                | PRIMARY                  | PRIMARY KEY     |
+| flyway_schema_history | PRIMARY                  | PRIMARY KEY     |
+| service_center        | PRIMARY                  | PRIMARY KEY     |
+| survey_invitation     | PRIMARY                  | PRIMARY KEY     |
+| survey_invitation     | ticket_id                | UNIQUE          |
+| survey_invitation     | token                    | UNIQUE          |
+| survey_invitation     | survey_invitation_ibfk_1 | FOREIGN KEY     |
+| survey_invitation     | chk_reminder_attempts    | CHECK           |
+| survey_invitation     | survey_invitation_chk_1  | CHECK           |
+| survey_invitation     | survey_invitation_chk_2  | CHECK           |
+| survey_invitation     | survey_invitation_chk_3  | CHECK           |
+| survey_response       | PRIMARY                  | PRIMARY KEY     |
+| survey_response       | ticket_id                | UNIQUE          |
+| survey_response       | survey_response_ibfk_1   | FOREIGN KEY     |
+| survey_response       | survey_response_chk_1    | CHECK           |
+| technician            | PRIMARY                  | PRIMARY KEY     |
+| technician            | technician_ibfk_1        | FOREIGN KEY     |
+| ticket                | PRIMARY                  | PRIMARY KEY     |
+| ticket                | ticket_code              | UNIQUE          |
+| ticket                | ticket_ibfk_1            | FOREIGN KEY     |
+| ticket                | ticket_ibfk_2            | FOREIGN KEY     |
+| ticket                | ticket_ibfk_3            | FOREIGN KEY     |
++-----------------------+--------------------------+-----------------+
