@@ -1,4 +1,6 @@
 import { expect, test } from '@playwright/test';
+import { mkdirSync } from 'node:fs';
+import { resolve } from 'node:path';
 
 // This suite sends a real response. Run only against a disposable MySQL test schema.
 const token = process.env.E2E_SURVEY_TOKEN;
@@ -14,14 +16,18 @@ async function login(page, username) {
   await expect(page.getByRole('button', { name: 'Đăng xuất' })).toBeVisible();
 }
 
-test('real customer response reaches scoped statistics, lookup and Excel', async ({ page }, testInfo) => {
+test('TC-12 real customer response, XSS sanitization, scoped statistics, lookup and Excel', async ({ page }, testInfo) => {
+  const dialogs = [];
+  page.on('dialog', async dialog => { dialogs.push(dialog.message()); await dialog.dismiss(); });
+  const xssComment = 'E2E XSS <script>alert(1)</script> intact';
+  const sanitizedComment = 'E2E XSS alert(1) intact';
   await page.setViewportSize({ width: 360, height: 800 });
   await page.goto(`/khao-sat/${token}`);
   await expect(page.getByText(ticketCode, { exact: true })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await page.screenshot({ path: testInfo.outputPath('01-survey-mobile.png'), fullPage: true });
   await page.getByRole('radio', { name: '5 điểm' }).check();
-  await page.getByLabel(/Nhận xét/).fill('Kiểm thử E2E: phục vụ nhiệt tình');
+  await page.getByLabel(/Nhận xét/).fill(xssComment);
   await page.getByRole('button', { name: 'GỬI PHẢN HỒI' }).click();
   await expect(page.getByRole('heading', { name: 'Đánh giá đã được ghi nhận' })).toBeVisible();
   await page.reload();
@@ -36,11 +42,15 @@ test('real customer response reaches scoped statistics, lookup and Excel', async
   await page.screenshot({ path: testInfo.outputPath('03-technician-stats.png'), fullPage: true });
   await page.getByRole('link', { name: 'Danh sách phản hồi' }).click();
   const row = page.getByRole('row').filter({ hasText: ticketCode });
-  await expect(row).toContainText('Kiểm thử E2E: phục vụ nhiệt tình');
+  await expect(row).toContainText(sanitizedComment);
+  expect(dialogs).toEqual([]);
   await expect(row).toContainText(/\d{3}\*+\d{3}/);
   await expect(page.getByLabel('Trung tâm')).toBeDisabled();
   await expect(page.getByRole('button', { name: 'Xuất Excel' })).toHaveCount(0);
   await page.screenshot({ path: testInfo.outputPath('02-response-list.png'), fullPage: true });
+  const evidencePath = resolve(process.cwd(), '..', 'docs', 'screenshots', 'TC-12.png');
+  mkdirSync(resolve(evidencePath, '..'), { recursive: true });
+  await page.screenshot({ path: evidencePath, fullPage: true });
   await page.getByRole('link', { name: 'Tỉ lệ phản hồi', exact: true }).click();
   await expect(page.getByRole('table')).toBeVisible();
   await expect(page.getByRole('alert')).toHaveCount(0);
