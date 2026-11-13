@@ -316,7 +316,10 @@ test('TC-09 Flyway rerun is a no-op at schema version 6', async ({ page }, testI
   }, async () => {
     const logPath = process.env.QA_SECOND_STARTUP_LOG;
     if (!logPath) throw new Error('QA_SECOND_STARTUP_LOG is required');
-    const startup = readFileSync(logPath, 'utf8');
+    const startupBytes = readFileSync(logPath);
+    const startup = startupBytes.includes(0)
+      ? startupBytes.toString('utf16le').replace(/^\uFEFF/, '')
+      : startupBytes.toString('utf8');
     const applied = database('SELECT COUNT(*) FROM flyway_schema_history WHERE success=1');
     const versions = database('SELECT GROUP_CONCAT(version ORDER BY installed_rank SEPARATOR ",") FROM flyway_schema_history WHERE success=1');
     expect(startup).toContain('No migration necessary');
